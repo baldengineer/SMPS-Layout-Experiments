@@ -1,0 +1,584 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Step-Down"
+Date "2021-11-30"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L My_Library:C_0805 Cin1
+U 1 1 61A72026
+P 4450 3550
+F 0 "Cin1" H 4200 3600 50  0000 L CNN
+F 1 "300u" H 4100 3500 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10.5" H 4450 3550 50  0001 C CNN
+F 3 "~" H 4450 3550 50  0001 C CNN
+F 4 "10AH2449" H 4450 3550 50  0001 C CNN "SPN"
+	1    4450 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L My_Library:R_0805 R2
+U 1 1 61A725E4
+P 5950 4050
+F 0 "R2" V 5754 4050 50  0000 C CNN
+F 1 "6.8k" V 5845 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5950 4050 50  0001 C CNN
+F 3 "~" H 5950 4050 50  0001 C CNN
+	1    5950 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4700 3400 4450 3400
+Wire Wire Line
+	4450 3400 4450 3450
+$Comp
+L Device:L_Small L1
+U 1 1 61A73B52
+P 6150 3700
+F 0 "L1" H 6198 3746 50  0000 L CNN
+F 1 "180u" H 6198 3655 50  0000 L CNN
+F 2 "Inductor_SMD:L_Bourns_SRR1210A" H 6150 3700 50  0001 C CNN
+F 3 "~" H 6150 3700 50  0001 C CNN
+F 4 "SRR1210-181M" H 6150 3700 50  0001 C CNN "MFN"
+	1    6150 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L My_Library:C_0805 Co1
+U 1 1 61A75D36
+P 6150 4200
+F 0 "Co1" H 6242 4246 50  0000 L CNN
+F 1 "4700u" H 6242 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_18x17.5" H 6150 4200 50  0001 C CNN
+F 3 "~" H 6150 4200 50  0001 C CNN
+	1    6150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 61A76775
+P 4450 3700
+F 0 "#PWR0101" H 4450 3450 50  0001 C CNN
+F 1 "GND" H 4455 3527 50  0001 C CNN
+F 2 "" H 4450 3700 50  0001 C CNN
+F 3 "" H 4450 3700 50  0001 C CNN
+	1    4450 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3650 4450 3700
+$Comp
+L power:GND #PWR0102
+U 1 1 61A770B8
+P 6150 4350
+F 0 "#PWR0102" H 6150 4100 50  0001 C CNN
+F 1 "GND" H 6155 4177 50  0001 C CNN
+F 2 "" H 6150 4350 50  0001 C CNN
+F 3 "" H 6150 4350 50  0001 C CNN
+	1    6150 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4300 6150 4350
+$Comp
+L My_Library:R_0805 Rf1
+U 1 1 61A77739
+P 5550 4400
+F 0 "Rf1" H 5650 4500 50  0000 C CNN
+F 1 "68k" H 5700 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5550 4400 50  0001 C CNN
+F 3 "~" H 5550 4400 50  0001 C CNN
+	1    5550 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L My_Library:C_0805 Cf1
+U 1 1 61A78251
+P 5400 4700
+F 0 "Cf1" V 5250 4700 50  0000 C CNN
+F 1 "100n" V 5150 4700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5400 4700 50  0001 C CNN
+F 3 "~" H 5400 4700 50  0001 C CNN
+	1    5400 4700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 4700 5550 4700
+Wire Wire Line
+	5500 4050 5550 4050
+Wire Wire Line
+	5250 4500 5250 4700
+Wire Wire Line
+	5250 4700 5300 4700
+Wire Wire Line
+	5550 4500 5550 4700
+Wire Wire Line
+	5550 4300 5550 4050
+Connection ~ 5550 4050
+$Comp
+L Device:D_Schottky_Small D1
+U 1 1 61A7C052
+P 5600 3550
+F 0 "D1" V 5554 3620 50  0000 L CNN
+F 1 "50V,5A" V 5645 3620 50  0000 L CNN
+F 2 "Diode_SMD:D_SMC" V 5600 3550 50  0001 C CNN
+F 3 "~" V 5600 3550 50  0001 C CNN
+F 4 "B540C-13-F" V 5600 3550 50  0001 C CNN "MFN"
+	1    5600 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L My_Library:MC34167 U1
+U 1 1 61A70213
+P 5100 3950
+F 0 "U1" H 5100 4515 50  0000 C CNN
+F 1 "MC34167" H 5100 4424 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_P3.4x3.7mm_StaggerOdd_Lead3.8mm_Vertical" H 5200 4600 50  0001 C CNN
+F 3 "" H 5200 4600 50  0001 C CNN
+	1    5100 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3400 6150 3600
+Wire Wire Line
+	6150 4100 6150 4050
+Wire Wire Line
+	6050 4050 6150 4050
+Connection ~ 6150 4050
+Wire Wire Line
+	6150 4050 6150 3800
+$Comp
+L power:GND #PWR0103
+U 1 1 61A8336A
+P 5600 3700
+F 0 "#PWR0103" H 5600 3450 50  0001 C CNN
+F 1 "GND" H 5605 3527 50  0001 C CNN
+F 2 "" H 5600 3700 50  0001 C CNN
+F 3 "" H 5600 3700 50  0001 C CNN
+	1    5600 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3650 5600 3700
+$Comp
+L power:GND #PWR0104
+U 1 1 61A83FB3
+P 4950 4550
+F 0 "#PWR0104" H 4950 4300 50  0001 C CNN
+F 1 "GND" H 4955 4377 50  0001 C CNN
+F 2 "" H 4950 4550 50  0001 C CNN
+F 3 "" H 4950 4550 50  0001 C CNN
+	1    4950 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4500 4950 4550
+Wire Wire Line
+	5550 4050 5700 4050
+$Comp
+L My_Library:R_0805 R1
+U 1 1 61A86475
+P 5850 4400
+F 0 "R1" H 5950 4500 50  0000 C CNN
+F 1 "k" H 6000 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5850 4400 50  0001 C CNN
+F 3 "~" H 5850 4400 50  0001 C CNN
+	1    5850 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4300 5850 4150
+Wire Wire Line
+	5850 4150 5700 4150
+Wire Wire Line
+	5700 4150 5700 4050
+Connection ~ 5700 4050
+$Comp
+L power:GND #PWR0105
+U 1 1 61A86AE7
+P 5850 4550
+F 0 "#PWR0105" H 5850 4300 50  0001 C CNN
+F 1 "GND" H 5855 4377 50  0001 C CNN
+F 2 "" H 5850 4550 50  0001 C CNN
+F 3 "" H 5850 4550 50  0001 C CNN
+	1    5850 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4500 5850 4550
+Wire Wire Line
+	5500 3400 5600 3400
+Wire Wire Line
+	5600 3450 5600 3400
+Connection ~ 5600 3400
+Wire Wire Line
+	5600 3400 6150 3400
+$Comp
+L Connector:Barrel_Jack J1
+U 1 1 61A895EC
+P 4600 2400
+F 0 "J1" H 4657 2725 50  0000 C CNN
+F 1 "Vin_Jack" H 4657 2634 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 4650 2360 50  0001 C CNN
+F 3 "~" H 4650 2360 50  0001 C CNN
+	1    4600 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 61A8A63E
+P 4950 2550
+F 0 "#PWR0106" H 4950 2300 50  0001 C CNN
+F 1 "GND" H 4955 2377 50  0001 C CNN
+F 2 "" H 4950 2550 50  0001 C CNN
+F 3 "" H 4950 2550 50  0001 C CNN
+	1    4950 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2500 4950 2500
+Wire Wire Line
+	4950 2500 4950 2550
+Wire Wire Line
+	4900 2300 5300 2300
+Text Label 5300 2300 2    50   ~ 0
+Vin
+Text Label 4550 3400 0    50   ~ 0
+Vin
+Text Label 6350 4050 2    50   ~ 0
+Vout
+Wire Wire Line
+	6150 4050 6400 4050
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 61A8F106
+P 5500 2300
+F 0 "J3" H 5418 1975 50  0000 C CNN
+F 1 "Vin_HDR" H 5418 2066 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5500 2300 50  0001 C CNN
+F 3 "~" H 5500 2300 50  0001 C CNN
+	1    5500 2300
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 61A90338
+P 5100 2450
+F 0 "#PWR0107" H 5100 2200 50  0001 C CNN
+F 1 "GND" H 5105 2277 50  0001 C CNN
+F 2 "" H 5100 2450 50  0001 C CNN
+F 3 "" H 5100 2450 50  0001 C CNN
+	1    5100 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2400 5100 2400
+Wire Wire Line
+	5100 2400 5100 2450
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 61A90BF4
+P 7250 2300
+F 0 "J5" H 7330 2292 50  0000 L CNN
+F 1 "Vout_HDR" H 7330 2201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7250 2300 50  0001 C CNN
+F 3 "~" H 7250 2300 50  0001 C CNN
+	1    7250 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 61A91486
+P 7000 2450
+F 0 "#PWR0108" H 7000 2200 50  0001 C CNN
+F 1 "GND" H 7005 2277 50  0001 C CNN
+F 2 "" H 7000 2450 50  0001 C CNN
+F 3 "" H 7000 2450 50  0001 C CNN
+	1    7000 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2400 7000 2400
+Wire Wire Line
+	7000 2400 7000 2450
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 61A9379A
+P 6600 2300
+F 0 "J4" H 6518 2517 50  0000 C CNN
+F 1 "Vout_Screw" H 6518 2426 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 6600 2300 50  0001 C CNN
+F 3 "~" H 6600 2300 50  0001 C CNN
+	1    6600 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 61A94D98
+P 6850 2450
+F 0 "#PWR0109" H 6850 2200 50  0001 C CNN
+F 1 "GND" H 6855 2277 50  0001 C CNN
+F 2 "" H 6850 2450 50  0001 C CNN
+F 3 "" H 6850 2450 50  0001 C CNN
+	1    6850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2400 6850 2400
+Wire Wire Line
+	6850 2400 6850 2450
+Text Label 5950 3400 2    50   ~ 0
+SW
+$Comp
+L Connector:TestPoint TP3
+U 1 1 61A95EFC
+P 6150 3400
+F 0 "TP3" H 6208 3518 50  0000 L CNN
+F 1 "SW" H 6208 3427 50  0000 L CNN
+F 2 "My Libraries:Harwin-S1751-46-Test-Point" H 6350 3400 50  0001 C CNN
+F 3 "~" H 6350 3400 50  0001 C CNN
+	1    6150 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 6150 3400
+Text Label 5700 4050 2    50   ~ 0
+Fb
+$Comp
+L Connector:TestPoint TP2
+U 1 1 61A968EB
+P 5550 4050
+F 0 "TP2" H 5600 4200 50  0000 L CNN
+F 1 "FB" H 5608 4077 50  0001 L CNN
+F 2 "My Libraries:Harwin-S1751-46-Test-Point" H 5750 4050 50  0001 C CNN
+F 3 "~" H 5750 4050 50  0001 C CNN
+	1    5550 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 4050 5850 4050
+Text Label 5250 4600 3    50   ~ 0
+Comp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61A9A115
+P 4450 3400
+F 0 "TP1" H 4500 3550 50  0000 L CNN
+F 1 "In" H 4508 3427 50  0001 L CNN
+F 2 "My Libraries:Harwin-S1751-46-Test-Point" H 4650 3400 50  0001 C CNN
+F 3 "~" H 4650 3400 50  0001 C CNN
+	1    4450 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 4450 3400
+$Comp
+L Connector:TestPoint TP4
+U 1 1 61A9AAB1
+P 6400 4050
+F 0 "TP4" H 6450 4200 50  0000 L CNN
+F 1 "Out" H 6458 4077 50  0001 L CNN
+F 2 "My Libraries:Harwin-S1751-46-Test-Point" H 6600 4050 50  0001 C CNN
+F 3 "~" H 6600 4050 50  0001 C CNN
+	1    6400 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2200 5050 2200
+Text Label 5050 2200 0    50   ~ 0
+Comp
+Wire Wire Line
+	7050 2300 6800 2300
+Text Label 6800 2300 0    50   ~ 0
+Vout
+$Comp
+L My_Library:D_1206 D3
+U 1 1 61ABF1CB
+P 3550 4350
+F 0 "D3" V 3596 4280 50  0000 R CNN
+F 1 "Vin" V 3505 4280 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric" V 3550 4350 50  0001 C CNN
+F 3 "~" V 3550 4350 50  0001 C CNN
+	1    3550 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L My_Library:D_1206 D2
+U 1 1 61ABF64E
+P 3100 4350
+F 0 "D2" V 3146 4280 50  0000 R CNN
+F 1 "Vout" V 3055 4280 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric" V 3100 4350 50  0001 C CNN
+F 3 "~" V 3100 4350 50  0001 C CNN
+	1    3100 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L My_Library:R_0805 R3
+U 1 1 61ABF917
+P 3100 4050
+F 0 "R3" H 3200 4150 50  0000 C CNN
+F 1 "k" H 3250 4050 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3100 4050 50  0001 C CNN
+F 3 "~" H 3100 4050 50  0001 C CNN
+	1    3100 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L My_Library:R_0805 R4
+U 1 1 61AC076E
+P 3550 4050
+F 0 "R4" H 3650 4150 50  0000 C CNN
+F 1 "k" H 3700 4050 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3550 4050 50  0001 C CNN
+F 3 "~" H 3550 4050 50  0001 C CNN
+	1    3550 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 4150 3100 4250
+Wire Wire Line
+	3550 4150 3550 4250
+$Comp
+L power:GND #PWR0110
+U 1 1 61AC1C21
+P 3100 4550
+F 0 "#PWR0110" H 3100 4300 50  0001 C CNN
+F 1 "GND" H 3105 4377 50  0001 C CNN
+F 2 "" H 3100 4550 50  0001 C CNN
+F 3 "" H 3100 4550 50  0001 C CNN
+	1    3100 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 61AC209C
+P 3550 4550
+F 0 "#PWR0111" H 3550 4300 50  0001 C CNN
+F 1 "GND" H 3555 4377 50  0001 C CNN
+F 2 "" H 3550 4550 50  0001 C CNN
+F 3 "" H 3550 4550 50  0001 C CNN
+	1    3550 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 4450 3100 4550
+Wire Wire Line
+	3550 4450 3550 4550
+Wire Wire Line
+	3550 3950 3550 3650
+Wire Wire Line
+	3100 3950 3100 3650
+Text Label 3550 3650 3    50   ~ 0
+Vin
+Text Label 3100 3650 3    50   ~ 0
+Vout
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61ACA136
+P 1650 1350
+F 0 "H1" H 1750 1396 50  0000 L CNN
+F 1 "MountingHole" H 1750 1305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 1650 1350 50  0001 C CNN
+F 3 "~" H 1650 1350 50  0001 C CNN
+	1    1650 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61ACA4AE
+P 1650 1550
+F 0 "H2" H 1750 1596 50  0000 L CNN
+F 1 "MountingHole" H 1750 1505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 1650 1550 50  0001 C CNN
+F 3 "~" H 1650 1550 50  0001 C CNN
+	1    1650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 61ACA62B
+P 1650 1750
+F 0 "H3" H 1750 1796 50  0000 L CNN
+F 1 "MountingHole" H 1750 1705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 1650 1750 50  0001 C CNN
+F 3 "~" H 1650 1750 50  0001 C CNN
+	1    1650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 61ACA88A
+P 1650 1950
+F 0 "H4" H 1750 1996 50  0000 L CNN
+F 1 "MountingHole" H 1750 1905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 1650 1950 50  0001 C CNN
+F 3 "~" H 1650 1950 50  0001 C CNN
+	1    1650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 61A71FC7
+P 7300 3850
+F 0 "TP6" H 7358 3968 50  0000 L CNN
+F 1 "GND" H 7358 3877 50  0000 L CNN
+F 2 "My Libraries:Harwin-S1751-46-Test-Point" H 7500 3850 50  0001 C CNN
+F 3 "~" H 7500 3850 50  0001 C CNN
+	1    7300 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 61A720CC
+P 7300 4050
+F 0 "#PWR0112" H 7300 3800 50  0001 C CNN
+F 1 "GND" H 7305 3877 50  0001 C CNN
+F 2 "" H 7300 4050 50  0001 C CNN
+F 3 "" H 7300 4050 50  0001 C CNN
+	1    7300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 61A72C7F
+P 7600 3850
+F 0 "TP7" H 7658 3968 50  0000 L CNN
+F 1 "GND" H 7658 3877 50  0000 L CNN
+F 2 "My Libraries:Harwin-S1751-46-Test-Point" H 7800 3850 50  0001 C CNN
+F 3 "~" H 7800 3850 50  0001 C CNN
+	1    7600 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 61A72EB2
+P 7000 3850
+F 0 "TP5" H 7058 3968 50  0000 L CNN
+F 1 "GND" H 7058 3877 50  0000 L CNN
+F 2 "My Libraries:Harwin-S1751-46-Test-Point" H 7200 3850 50  0001 C CNN
+F 3 "~" H 7200 3850 50  0001 C CNN
+	1    7000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3850 7000 3950
+Wire Wire Line
+	7000 3950 7300 3950
+Wire Wire Line
+	7600 3950 7600 3850
+Wire Wire Line
+	7300 3850 7300 3950
+Connection ~ 7300 3950
+Wire Wire Line
+	7300 3950 7600 3950
+Wire Wire Line
+	7300 4050 7300 3950
+$EndSCHEMATC
